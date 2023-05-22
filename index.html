@@ -99,6 +99,7 @@
             var prob = 1 / (1 + Math.exp(-coef[0] + coef[1] * AI));                    
             prob = prob * 100;
             prob = prob.toString();
+            prob = prob + "%";
             document.getElementById("demo").innerHTML = prob;
         }
     </script>
