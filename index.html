@@ -78,7 +78,7 @@
     
         <div class="row top-buffer">
             <div class="col-md"> 
-                <h3> Probability that Epilepsy focality is in the Right/Bilateral Hemisphere: <p class="text-nowrap" id="demo"> </p> </h3>
+                <h3> Probability that Epilepsy focality is in the Right/Bilateral Hemisphere: <p class="text-nowrap" " id="demo"> </p> </h3>
             </div>
         </div>
     </div>
@@ -98,6 +98,7 @@
             var AI = ((Number(document.getElementById("LSR").value) - (Number(document.getElementById("RSR").value)) / ((Number(document.getElementById("LSR").value) + (Number(document.getElementById("RSR").value));
             var prob = 1 / (1 + Math.exp(-coef[0] + coef[1] * AI));                    
             prob = prob * 100;
+            prob = prob.toString();
             document.getElementById("demo").innerHTML = prob;
         }
     </script>
