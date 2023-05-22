@@ -95,7 +95,7 @@
     <script>
         function myFunction() {
             var coef = [-0.4564, 2.9101];
-            var AI = ((Number(document.getElementById("LSR").value) - (Number(document.getElementById("RSR").value)) / ((Number(document.getElementById("LSR").value) + (Number(document.getElementById("RSR").value));
+            var AI = ( Number(document.getElementById("LSR").value) - Number(document.getElementById("RSR").value) ) / ( Number(document.getElementById("LSR").value) + Number(document.getElementById("RSR").value) );
             var prob = 1 / (1 + Math.exp(-coef[0] + coef[1] * AI));                    
             prob = prob * 100;
             prob = prob.toString();
