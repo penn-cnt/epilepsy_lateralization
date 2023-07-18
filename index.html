@@ -48,7 +48,7 @@
 </header>
     <main role="main" class="container text-center ">
         <br>
-        <h1 class="mt-5"> Epilepsy Lateralization Classfier </h1>
+        <h1 class="mt-5"> Interictal intracranial EEG spike asymmetry to predict seizure onset zone laterality in temporal lobe epilepsy </h1>
         <br>
       </main>
   
@@ -57,13 +57,13 @@
         <div class="row top-buffer">
             
             <div class="col-md">
-               <label for="LSR"> Left Spike Rate: </label>
+               <label for="LSR"> Number of spikes in the LEFT temporal lobe (in 5 or more randomly chosen one-minute segments in sleep): </label>
                <input id="LSR" type="number" value="0" min="0" required>
                 <span class="validity"></span>
             </div>
             
             <div class="col-md">
-               <label for="RSR"> Right Spike Rate: </label>
+               <label for="RSR"> Number of spikes in the RIGHT temporal lobe (in 5 or more randomly chosen one-minute segments in sleep): </label>
                <input id="RSR" type="number" value="0" min="0" required>
             </div>
             
@@ -75,8 +75,17 @@
     
         <div class="row top-buffer">
             <div class="col-md"> 
-                <h3> Probability that Epilepsy focality is in the Right/Bilateral Hemisphere: <p class="text-nowrap" " id="demo"> </p> </h3>
+                <h3> Spike rate asymmetry index: <p class="text-nowrap" " id="demo"> </p> </h3>
             </div>
+            
+            <div class="col-md"> 
+                <h3> Probability of a left-sided seizure onset zone according to Model 1: <p class="text-nowrap" " id="demo"> </p> </h3>
+            </div>
+            
+            <div class="col-md"> 
+                <h3> Probability of a right-sided seizure onset zone according to Model 2:  <p class="text-nowrap" " id="demo"> </p> </h3>
+            </div>
+            
         </div>
     </div>
         
