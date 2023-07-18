@@ -83,19 +83,19 @@
         
         <div class="row top-buffer">
             <div class="col-md"> 
-                <h3> Spike rate asymmetry index: <p class="text-nowrap" " id="demo"> </p> </h3>
+                <h3> Spike rate asymmetry index: <p class="text-nowrap" " id="ai"> </p> </h3>
             </div>
         </div>
 
         <div class="row top-buffer">
             <div class="col-md"> 
-                <h3> Probability of a left-sided seizure onset zone according to Model 1: <p class="text-nowrap" " id="demo"> </p> </h3>
+                <h3> Probability of a left-sided seizure onset zone according to Model 1: <p class="text-nowrap" " id="demo_left"> </p> </h3>
             </div>
         </div>
         
         <div class="row top-buffer">
             <div class="col-md"> 
-                <h3> Probability of a right-sided seizure onset zone according to Model 2:  <p class="text-nowrap" " id="demo"> </p> </h3>
+                <h3> Probability of a right-sided seizure onset zone according to Model 2:  <p class="text-nowrap" " id="demo_right"> </p> </h3>
             </div>
         </div>
             
@@ -113,13 +113,20 @@
 
     <script>
         function myFunction() {
-            var coef = [-0.4564, 2.9101];
+            var coef = [-0.4139, 2.5970, -0.0013, -1.3263];
             var AI = ( Number(document.getElementById("LSR").value) - Number(document.getElementById("RSR").value) ) / ( Number(document.getElementById("LSR").value) + Number(document.getElementById("RSR").value) );
-            var prob = 1 / (1 + Math.exp(-coef[0] + coef[1] * AI));                    
+            var prob = 1 / (1 + Math.exp(-coef[0] - (coef[1] * AI)));  
+            var prob2 = 1 / (1 + Math.exp(-coef[2] - (coef[3] * AI)));  
             prob = prob * 100;
             prob = prob.toString();
             prob = prob + "%";
-            document.getElementById("demo").innerHTML = prob;
+            
+            prob2 = prob2 * 100;
+            prob2 = prob2.toString();
+            prob2 = prob2 + "%";
+            document.getElementById("demo_right").innerHTML = prob2;
+            document.getElementByID("demo_left").innerHTML = prob;
+            document.getElementByID("ai").innerHTML = ai;
         }
     </script>
                     
