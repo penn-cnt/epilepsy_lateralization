@@ -137,11 +137,45 @@
             <p>The formula for Model 2 (predicting the probability of right-sided seizure onset zone) is:</p>
             <p>insert math formula (using coefficients 3 and 4)</p>
             </div>
-
+        </div>
+        <div class="row top-buffer">
+            <div class="col-md"> 
+                <p> These probabilities are the outputs of two separate logistic regression models trained on data from patients at the Hospital of the University of Pennsylvania. The models separately predict the probabilities of left- and right-sided seizure onset zones.</p>
+            </div>
+        </div>
+        <div class="row top-buffer">
+            <div class="col-md"> 
+                <p> Note that the models may give conflicting information (e.g., Model 1 may predict a high probability of left-sided seizure onset zone, and Model 2 may predict a high probability of right-sided seizure onset zone). In this case, predictions should be treated with additional caution, and the user should note that Model 1 had higher accuracy than Model 2 in the original study.</p>
+            </div>
+        </div>
+        <div class="row top-buffer">
+            <div class="col-md"> 
+                <p><em>Accuracy of the results:</em></p>
+                <p>When the models were validated using cross-validation on the internal dataset of patients from the Hospital of the University of Pennsylvania, the performance of the two models was:</p>
+                <p>Model 1: AUC = ***, balanaced accuracy = ***</p>
+                <p>Model 2: AUC = ***, balanaced accuracy = ***</p>
+            </div>
+        </div>
+        <div class="row top-buffer">
+            <div class="col-md"> 
+                <p><em>Accuracy of the results:</em></p>
+                <p>When the models were tested on an external dataset of patients from Medical University of South Carolina at the same operating point as that of the internal dataset (a cutoff of a probability of 0.5), the performance was:</p>
+                <p>Model 1: balanaced accuracy = ***</p>
+                <p>Model 2: balanaced accuracy = ***</p>
+            </div>
         </div>
 
-        
-        
+        <div class="row top-buffer">
+            <div class="col-md"> 
+                <p>The difference in performance for Model 2 between the two centers may be due to the imbalance between the two centers in how many patients had left-sided seizure onset zones and how many had right-sided seizure onset zones.</p>
+            </div>
+        </div>
+
+        <div class="row top-buffer">
+            <div class="col-md"> 
+                <p>References</p>
+            </div>
+        </div>
         
         </div>
     </div>
