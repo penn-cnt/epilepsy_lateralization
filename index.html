@@ -139,9 +139,9 @@
             <div class="col-md"> 
             <p> Where <em>Spikes<sub>Left</sub></em> is the number of spikes in the left temporal lobe, and <em>Spikes<sub>Right</sub></em> is the number of spikes in the right temporal lobe. <em>AI</em> ranges between -1 and 1. A positive <em>AI</em> implies more spikes on the left, a negative <em>AI</em> implies more spikes on the right, and an <em>AI</em> of zero implies an equal number of spikes in the left and right temporal lobe. </p>
             <p>The formula for Model 1 (predicting the probability of left-sided seizure onset zone) is:</p>
-            <p>insert math formula (using coefficients 1 and 2)</p>
+            <p>\[Probabililty_{Left} = \frac{1}{1+exp(-coef_{1} - AI * coef_{2})\]</p>
             <p>The formula for Model 2 (predicting the probability of right-sided seizure onset zone) is:</p>
-            <p>insert math formula (using coefficients 3 and 4)</p>
+             <p>\[Probabililty_{Left} = \frac{1}{1+exp(-coef_{3} - AI * coef_{4})\]</p>
             </div>
         </div>
         <div class="row top-buffer">
