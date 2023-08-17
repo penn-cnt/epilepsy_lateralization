@@ -203,15 +203,17 @@
             var prob = 1 / (1 + Math.exp(-coef[0] - (coef[1] * AI)));  
             var prob2 = 1 / (1 + Math.exp(-coef[2] - (coef[3] * AI)));  
             prob = prob * 100;
-            prob = prob.toString();
             prob = prob.toPrecision(3);
+            prob = prob.toString();
             prob = prob + "%";
             
             prob2 = prob2 * 100;
-            prob2 = prob2.toString();
             prob2 = prob2.toPrecision(3);
+            prob2 = prob2.toString();
+            
             prob2 = prob2 + "%";
 
+            AI = AI.toPrecision(3);
             AI = AI.toString();
             
             document.getElementById("demo_right").innerHTML = prob2;
