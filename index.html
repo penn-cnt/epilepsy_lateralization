@@ -109,7 +109,7 @@
         
         <div class="row top-buffer">
             <div class="col-md"> 
-                <h4> Calcultor Information:</h4>
+                <h4> Calculator Information:</h4>
             </div>
         </div>
         
@@ -121,7 +121,7 @@
         
         <div class="row top-buffer">
             <div class="col-md"> 
-                <p><em>Instructions for use:</em> Choose five or more randomly chosen one-minute segments of intracranial EEG data in sleep. Count (manually or using an automated spike detector) the number of spikes in the left temporal lobe and in the right temporal lobe. Input these values in the calculator. The units (spikes/minute or spikes/hour, etc.) do not matter in the calculation.</p>
+                <p><em>Instructions for use:</em> Choose five or more randomly chosen one-minute segments of intracranial EEG data in sleep. Count (manually or using an automated spike detector) the number of spikes in the temporal lobe contacts. Take the average across the left-sided contacts and across the right-sided contacts to obtain the average spike rates in the left and right temporal lobes. Input these values in the calculator. The units (spikes/minute or spikes/hour, etc.) do not matter in the calculation.</p>
             </div>
         </div>
 
@@ -160,15 +160,15 @@
             <div class="col-md"> 
                 <p><em>Accuracy of the results:</em></p>
                 <p>When the models were validated using cross-validation on the internal dataset of patients from the Hospital of the University of Pennsylvania, the performance of the two models was:</p>
-                <p>Model 1: AUC = ***, balanaced accuracy = ***</p>
-                <p>Model 2: AUC = ***, balanaced accuracy = ***</p>
+                <p>Model 1: AUC = 0.83, balanaced accuracy = 78.9%</p>
+                <p>Model 2: AUC = 0.68 balanaced accuracy = 57.4%</p>
             </div>
         </div>
         <div class="row top-buffer">
             <div class="col-md"> 
                 <p>When the models were tested on an external dataset of patients from Medical University of South Carolina at the same operating point as that of the internal dataset (a cutoff of a probability of 0.5), the performance was:</p>
-                <p>Model 1: balanaced accuracy = ***</p>
-                <p>Model 2: balanaced accuracy = ***</p>
+                <p>Model 1: balanaced accuracy = 79.3%</p>
+                <p>Model 2: balanaced accuracy = 78.9&</p>
             </div>
         </div>
 
@@ -213,7 +213,7 @@
             
             prob2 = prob2 + "%";
 
-            AI = AI.toPrecision(3);
+            AI = AI.toPrecision(2);
             AI = AI.toString();
             
             document.getElementById("demo_right").innerHTML = prob2;
