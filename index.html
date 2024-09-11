@@ -58,50 +58,53 @@
       
   <div class="row mt-4"></div>
       
-    <div class= "container">
-        
+    <div class="container">
+        <!-- Row with two columns -->
         <div class="row top-buffer">
             
-            <div class="col-md">
-               <label for="LSR"> Number of spikes in the LEFT temporal lobe (in 5 or more randomly chosen one-minute segments in sleep): </label>
-               <input id="LSR" type="number" value="0" min="0" required>
-                <span class="validity"></span>
-            </div>
-        
-        </div>
-        <div class="row top-buffer">
+            <!-- Left Column for Inputs -->
+            <div class="col-md-6">
+                <div class="row top-buffer">
+                    <div class="col-md">
+                        <label for="LSR"> Number of spikes in the LEFT temporal lobe (in 5 or more randomly chosen one-minute segments in sleep): </label>
+                        <input id="LSR" type="number" value="0" min="0" required>
+                        <span class="validity"></span>
+                    </div>
+                </div>
 
-            <div class="col-md">
-               <label for="RSR"> Number of spikes in the RIGHT temporal lobe (in 5 or more randomly chosen one-minute segments in sleep): </label>
-               <input id="RSR" type="number" value="0" min="0" required>
-            </div>
+                <div class="row top-buffer">
+                    <div class="col-md">
+                        <label for="RSR"> Number of spikes in the RIGHT temporal lobe (in 5 or more randomly chosen one-minute segments in sleep): </label>
+                        <input id="RSR" type="number" value="0" min="0" required>
+                    </div>
+                </div>
 
-        </div>
-        <div class="row top-buffer">
-
-            <div class="col-md">
-                <button type="button" class="btn btn-dark" onclick="myFunction()"> Submit </button>
+                <div class="row top-buffer">
+                    <div class="col-md">
+                        <button type="button" class="btn btn-dark" onclick="myFunction()"> Submit </button>
+                    </div>
+                </div>
             </div>
             
-        </div>
+            <!-- Right Column for Results -->
+            <div class="col-md-6">
+                <div class="row top-buffer">
+                    <div class="col-md"> 
+                        <h5> Spike rate asymmetry index: <p class="text-nowrap" id="ai"> </p> </h5>
+                    </div>
+                </div>
 
-<div class="row mt-4"></div>
-        
-        <div class="row top-buffer">
-            <div class="col-md"> 
-                <h5> Spike rate asymmetry index: <p class="text-nowrap" " id="ai"> </p> </h5>
-            </div>
-        </div>
+                <div class="row top-buffer">
+                    <div class="col-md"> 
+                        <h5> Probability of a left-sided seizure onset zone according to Model 1: <p class="text-nowrap" id="demo_left"> </p> </h5>
+                    </div>
+                </div>
 
-        <div class="row top-buffer">
-            <div class="col-md"> 
-                <h5> Probability of a left-sided seizure onset zone according to Model 1: <p class="text-nowrap" " id="demo_left"> </p> </h5>
-            </div>
-        </div>
-        
-        <div class="row top-buffer">
-            <div class="col-md"> 
-                <h5> Probability of a right-sided seizure onset zone according to Model 2:  <p class="text-nowrap" " id="demo_right"> </p> </h5>
+                <div class="row top-buffer">
+                    <div class="col-md"> 
+                        <h5> Probability of a right-sided seizure onset zone according to Model 2: <p class="text-nowrap" id="demo_right"> </p> </h5>
+                    </div>
+                </div>
             </div>
         </div>
 
